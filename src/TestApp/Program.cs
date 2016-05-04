@@ -1,4 +1,6 @@
-﻿using Metrics;
+﻿using System;
+using System.Linq;
+using Metrics;
 using MetricSetupAggregate;
 
 namespace TestApp
@@ -7,20 +9,28 @@ namespace TestApp
 	{
 		static void Main(string[] args)
 		{
-			MetricSetupAggregate.MetricSetupAggregate setupAggregate = null;
-			setupAggregate.CreateMetricSetup(new CreateMetricSetupCommand
-			{
-				MetricId = "CustomMetric",
-				Configuration = ""
-			});
+			//MetricSetupAggregate.MetricSetupAggregate setupAggregate = null;
+			//setupAggregate.CreateMetricSetup(new CreateMetricSetupCommand
+			//{
+			//	MetricId = "CustomMetric",
+			//	Configuration = ""
+			//});
 
-			ResourceChangedEventAdapter rceAdapter = null;
-			rceAdapter.ProcessEvent(new ResourceChangedEvent
+			//ResourceChangedEventAdapter rceAdapter = null;
+			//rceAdapter.ProcessEvent(new ResourceChangedEvent
+			//{
+			//	EntityType = "UserStory",
+			//	EntityId = 41,
+			//	ChangedFields = new[] {"Name", "Effort"}
+			//});
+
+			var viewGateway = new MetricSetupView();
+			foreach (var setup in viewGateway.GetAllSetups("userstory"))
 			{
-				EntityType = "UserStory",
-				EntityId = 41,
-				ChangedFields = new[] {"Name", "Effort"}
-			});
+				Console.WriteLine($"MetricId: {setup.MetricId}; Configuration: {setup.Configuration}");
+			}
+
+			Console.ReadLine();
 		}
 	}
 }
