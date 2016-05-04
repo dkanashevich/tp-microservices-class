@@ -16,7 +16,8 @@ namespace MetricSetupAggregate
 	
 	public class MetricSetupCreatedEvent
 	{
-		public MetricSetup Setup { get; set; }
+		public string MetricId { get; set; }
+		public string Configuration { get; set; }
 	}
 	
 	public class MetricSetupViewDto
@@ -87,7 +88,8 @@ namespace MetricSetupAggregate
 
 			_view.Update(new MetricSetupCreatedEvent
 			{
-				Setup = setup
+				MetricId = setup.MetricId,
+				Configuration = setup.Configuration
 			});
 
 			var targets = _targetBuilder.BuildTargets(setup);

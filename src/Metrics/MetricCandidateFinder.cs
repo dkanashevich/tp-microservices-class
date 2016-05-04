@@ -11,9 +11,9 @@ namespace Metrics
 
 	public class MetricCandidateFinder
 	{
-		private readonly MetricSetupView _setupView;
+		private readonly IMetricSetupView _setupView;
 
-		public MetricCandidateFinder(MetricSetupView setupView)
+		public MetricCandidateFinder(IMetricSetupView setupView)
 		{
 			_setupView = setupView;
 		}
