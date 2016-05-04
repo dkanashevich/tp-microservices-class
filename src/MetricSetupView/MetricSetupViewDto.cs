@@ -21,7 +21,10 @@ namespace MetricSetupView
 
 	public class MetricSetupView
 	{
-		private readonly List<MetricSetupViewDto> _setups = new List<MetricSetupViewDto>();
+		private readonly List<MetricSetupViewDto> _setups = new List<MetricSetupViewDto>
+		{
+			new MetricSetupViewDto {Configuration = "Test config", MetricId = "123", ListenedTypes = new[] {"UserStory"}}
+		};
 
 		public void Update(MetricSetupCreatedEvent ev)
 		{
