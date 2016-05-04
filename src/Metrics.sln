@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetricSetupAggregate", "MetricSetupAggregate\MetricSetupAggregate.csproj", "{200A9AB3-59B3-40DC-913E-0650B49FBA14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics", "Metrics\Metrics.csproj", "{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{2BDD0E1C-3505-4A26-A8A0-722709E7C9E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{200A9AB3-59B3-40DC-913E-0650B49FBA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200A9AB3-59B3-40DC-913E-0650B49FBA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200A9AB3-59B3-40DC-913E-0650B49FBA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200A9AB3-59B3-40DC-913E-0650B49FBA14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDD0E1C-3505-4A26-A8A0-722709E7C9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDD0E1C-3505-4A26-A8A0-722709E7C9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDD0E1C-3505-4A26-A8A0-722709E7C9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDD0E1C-3505-4A26-A8A0-722709E7C9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{66569DC9-ACB3-4EEB-91CD-BA0E33467DC5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Metrics</RootNamespace>
     <AssemblyName>Metrics</AssemblyName>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetricCandidateFinder.cs" />
+    <Compile Include="MetricExecutor.cs" />
+    <Compile Include="MetricResultApplier.cs" />
+    <Compile Include="MetricScheduler.cs" />
     <Compile Include="MetricSetups.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="MetricTargetBuilder.cs" />
+    <Compile Include="MetricTriggerHandler.cs" />
+    <Compile Include="IWriteServiceGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceChangedEventAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
